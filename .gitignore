@@ -2,3 +2,4 @@ output-*/
 packer_cache/
 *.qcow2
 *.iso
+*.log
