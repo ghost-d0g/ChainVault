@@ -66,7 +66,7 @@ source "qemu" "debian_base" {
     disk_interface = "virtio"
     net_device = "virtio-net"
     format = "qcow2"
-    headless = true 
+    headless = true
 
     output_directory = var.output_directory
     vm_name = "debian13-base.qcow2"
