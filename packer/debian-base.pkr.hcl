@@ -14,7 +14,8 @@ variable "iso_version" {
 
 variable "iso_checksum" {
     type =string 
-    default = "file:https://cdimage.debian.org/debian-cd/13.7.0/amd64/iso-cd/SHA256SUMS"
+    #default = "file:https://cdimage.debian.org/cdimage/archive/13.7.0/amd64/iso-cd/SHA256SUMS"
+    default="sha256:a7ef94ac2fb9a7fec454552abd629b7cc9d5155c886165a45649f5ce6167e355"
 }
 
 variable "output_directory" {
@@ -66,7 +67,7 @@ source "qemu" "debian_base" {
     disk_interface = "virtio"
     net_device = "virtio-net"
     format = "qcow2"
-    headless = true
+    headless = false
 
     output_directory = var.output_directory
     vm_name = "debian13-base.qcow2"
